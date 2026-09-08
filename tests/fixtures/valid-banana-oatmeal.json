@@ -1,0 +1,26 @@
+{
+  "name": "香蕉燕麦粥",
+  "recipeIngredient": [
+    {
+      "quantity": 100,
+      "unit": {"id": "g", "name": "克"},
+      "food": {"id": "oat", "name": "燕麦片"},
+      "expectedFood": {"id": "oat", "name": "燕麦片"},
+      "note": ""
+    },
+    {
+      "quantity": 1,
+      "unit": {"id": "piece", "name": "根"},
+      "food": {"id": "banana", "name": "香蕉"},
+      "expectedFood": {"id": "banana", "name": "香蕉"},
+      "note": "切片"
+    }
+  ],
+  "recipeInstructions": [{"text": "燕麦片煮熟后加入香蕉。"}],
+  "recipeCategory": [{"id": "breakfast", "name": "早餐"}],
+  "auditExpectations": {
+    "filters": {
+      "categories": [{"id": "breakfast", "name": "早餐"}]
+    }
+  }
+}

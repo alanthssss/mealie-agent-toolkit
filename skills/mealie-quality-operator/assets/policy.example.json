@@ -1,0 +1,15 @@
+{
+  "require_food_links": true,
+  "require_quantities": true,
+  "require_units_for_quantities": true,
+  "check_instruction_coverage": true,
+  "duplicate_food_similarity": 0.8,
+  "pantry_foods": ["水", "盐", "食用油", "黑胡椒"],
+  "aliases": {
+    "燕麦片": ["燕麦", "即食燕麦"],
+    "牛奶": ["纯牛奶", "鲜奶"],
+    "鸡蛋": ["蛋", "全蛋"],
+    "西兰花": ["青花菜"],
+    "鲈鱼": ["海鲈鱼", "淡水鲈鱼"]
+  }
+}

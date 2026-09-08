@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mealie Quality Operator"
+  short_description: "Safely create and audit structured Mealie data"
+  default_prompt: "Use $mealie-quality-operator to audit or update my Mealie recipes with save-time quality gates."

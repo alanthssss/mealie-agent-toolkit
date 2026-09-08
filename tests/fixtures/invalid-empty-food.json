@@ -1,0 +1,13 @@
+{
+  "name": "香蕉燕麦",
+  "recipeIngredient": [
+    {
+      "quantity": 100,
+      "unit": {"id": "g", "name": "克"},
+      "food": null,
+      "expectedFood": {"id": "oat", "name": "燕麦片"},
+      "note": "燕麦片"
+    }
+  ],
+  "recipeInstructions": [{"text": "燕麦片煮熟。"}]
+}

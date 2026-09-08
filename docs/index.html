@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Quality gates for agents that create and audit structured Mealie recipes, filters, plans, and shopping data.">
+  <meta property="og:title" content="Mealie Agent Toolkit">
+  <meta property="og:description" content="Make recipe automation trustworthy before it reaches Save.">
+  <meta property="og:image" content="https://alanthssss.github.io/mealie-agent-toolkit/assets/hero.png">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#07111f">
+  <title>Mealie Agent Toolkit — Recipe automation you can trust</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="nav wrap">
+    <a class="brand" href="#top" aria-label="Mealie Agent Toolkit home"><span class="mark">✓</span><span>Mealie Agent Toolkit</span></a>
+    <nav aria-label="Primary"><a href="#gates">Quality gates</a><a href="#demo">Real demo</a><a href="https://github.com/alanthssss/mealie-agent-toolkit/blob/main/README.zh-CN.md">中文</a><a class="button small" href="https://github.com/alanthssss/mealie-agent-toolkit">GitHub ↗</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div class="hero-copy">
+        <p class="eyebrow">OPEN AGENT SKILL · PYTHON 3.10+</p>
+        <h1>Recipe automation<br><em>you can trust.</em></h1>
+        <p class="lede">A deterministic quality layer for agents that create Mealie recipes, meal plans, filter links, and shopping data.</p>
+        <div class="actions"><a class="button" href="https://github.com/alanthssss/mealie-agent-toolkit">View on GitHub</a><a class="ghost" href="#quickstart">Run the auditor ↓</a></div>
+        <div class="proof"><span><b>0</b> runtime dependencies</span><span><b>6</b> quality gate families</span><span><b>MIT</b> licensed</span></div>
+      </div>
+      <div class="hero-art"><img src="assets/hero.png" alt="Structured recipe rows passing through a quality gate"></div>
+    </section>
+
+    <section class="ticker" aria-label="Common failures"><div>水 ≠ 水芹 <i>•</i> 鸡蛋 ≠ 鸡蛋果 <i>•</i> DISPLAY TEXT ≠ LINKED FOOD <i>•</i> SAVE ≠ VERIFIED</div></section>
+
+    <section id="gates" class="section wrap">
+      <p class="eyebrow">FAILURE MODES, MADE EXPLICIT</p>
+      <h2>The form can look right<br>while the data is wrong.</h2>
+      <div class="grid">
+        <article><span>01</span><h3>Food identity</h3><p>Checks the linked food object against the intended name or stable ID. Near matches fail closed.</p></article>
+        <article><span>02</span><h3>Structured rows</h3><p>Keeps quantity, unit, food, and note in their own fields. No duplicated display strings.</p></article>
+        <article><span>03</span><h3>Method coverage</h3><p>Flags ingredients that never appear in the method and method references absent from the list.</p></article>
+        <article><span>04</span><h3>Duplicate recipes</h3><p>Detects reordered names and overlapping ingredient sets before they become separate recipes.</p></article>
+        <article><span>05</span><h3>Plan arithmetic</h3><p>Reports meal occurrences, total servings, and unique recipes as different numbers.</p></article>
+        <article><span>06</span><h3>Read-after-write</h3><p>Re-reads saved data and executes the category, tag, tool, and food filters users depend on.</p></article>
+      </div>
+    </section>
+
+    <section id="demo" class="section demo">
+      <div class="wrap split">
+        <div><p class="eyebrow">REAL LOCAL MEALIE DEMO</p><h2>One recipe.<br>Two hidden defects.</h2><p>The visible recipe said “2 个 西红柿,” but its editable row held quantity <code>0</code>, no unit, no food link, and the entire phrase in the note field. It also failed the canonical <b>番茄</b> food filter.</p><a class="ghost" href="https://github.com/alanthssss/mealie-agent-toolkit/blob/main/docs/demo/tomato-eggs.md">Read the evidence log →</a></div>
+        <ol class="audit"><li class="bad"><b>Before</b><code>0 · unit: ∅ · food: ∅</code><small>note: “2 个 西红柿”</small></li><li><b>Gate</b><code>expected 番茄 = selected 番茄</code><small>alias 西红柿 → 番茄</small></li><li class="good"><b>After</b><code>2 · 个 · 番茄</code><small>番茄 ✓ 鸡蛋 ✓ filters passed</small></li></ol>
+      </div>
+    </section>
+
+    <section id="quickstart" class="section wrap quickstart">
+      <div><p class="eyebrow">60-SECOND START</p><h2>Audit before your agent saves.</h2><p>Install the skill, run the deterministic auditor, then require a live read-back and filter test in your adapter.</p></div>
+      <pre><button id="copy" aria-label="Copy command">Copy</button><code id="command">python3 skills/mealie-quality-operator/scripts/audit_mealie.py recipe recipe.json --strict</code></pre>
+    </section>
+
+    <section class="cta wrap"><p class="eyebrow">BUILT FROM REAL FAILURES</p><h2>Stop making the user<br>your test suite.</h2><div class="actions"><a class="button" href="https://github.com/alanthssss/mealie-agent-toolkit">Star & contribute on GitHub</a><a class="ghost" href="https://github.com/alanthssss/mealie-agent-toolkit/issues">Share a failure case →</a></div></section>
+  </main>
+  <footer class="wrap"><span>Mealie Agent Toolkit · MIT</span><span>Independent community project. Not affiliated with Mealie.</span></footer>
+  <script src="script.js"></script>
+</body>
+</html>

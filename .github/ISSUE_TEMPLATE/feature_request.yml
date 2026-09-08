@@ -1,0 +1,23 @@
+name: Feature request
+description: Propose a focused quality gate, adapter, or fixture
+title: "[Feature]: "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Real problem
+      description: Describe the failure this would prevent.
+    validations:
+      required: true
+  - type: textarea
+    id: gate
+    attributes:
+      label: Proposed gate or behavior
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Anonymized example
+      description: Optional JSON or before/after evidence. Never include secrets.

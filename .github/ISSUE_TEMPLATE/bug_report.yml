@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a reproducible auditor or skill failure
+title: "[Bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Remove tokens, private URLs, household IDs, and personal recipe data before submitting."
+  - type: textarea
+    id: failure
+    attributes:
+      label: Failure mode
+      description: What looked correct, and what was actually wrong?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Minimal reproduction
+      description: Include anonymized JSON and the exact command when possible.
+    validations:
+      required: true
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      placeholder: Mealie 3.x, Python 3.x, agent/runtime
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected gate behavior
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy check
+      options:
+        - label: I removed credentials, private URLs, household identifiers, and personal data.
+          required: true

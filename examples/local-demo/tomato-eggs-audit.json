@@ -1,0 +1,47 @@
+{
+  "name": "番茄炒蛋（示范）",
+  "recipeIngredient": [
+    {
+      "quantity": 2,
+      "unit": {"name": "个"},
+      "food": {"name": "西红柿"},
+      "expectedFood": {"name": "西红柿"},
+      "note": ""
+    },
+    {
+      "quantity": 3,
+      "unit": {"name": "个"},
+      "food": {"name": "鸡蛋"},
+      "expectedFood": {"name": "鸡蛋"},
+      "note": ""
+    },
+    {
+      "quantity": 1,
+      "unit": {"name": "汤匙"},
+      "food": {"name": "食用油"},
+      "expectedFood": {"name": "食用油"},
+      "note": ""
+    },
+    {
+      "quantity": 0.5,
+      "unit": {"name": "茶匙"},
+      "food": {"name": "盐"},
+      "expectedFood": {"name": "盐"},
+      "note": ""
+    },
+    {
+      "quantity": 1,
+      "unit": {"name": "茶匙"},
+      "food": {"name": "白糖"},
+      "expectedFood": {"name": "白糖"},
+      "note": ""
+    }
+  ],
+  "recipeInstructions": [
+    {"text": "准备食材：西红柿洗净切块，鸡蛋打入碗中。"},
+    {"text": "鸡蛋打散；西红柿切块。"},
+    {"text": "锅中放油，倒入蛋液炒至凝固后盛出。"},
+    {"text": "原锅放入西红柿，加入盐和白糖炒出汤汁。"},
+    {"text": "倒回鸡蛋，翻炒均匀即可。"}
+  ]
+}
